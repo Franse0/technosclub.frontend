@@ -1,0 +1,28 @@
+<div class="all-container">
+<section class="events-all" id="eventos">
+
+    <div class="flyer-container" id="pseudoSlider">
+      <i class="fa-solid fa-caret-up" ></i>
+    
+      <!-- <ng-container ngIf="i < 4"> -->
+        <ng-container >
+       <img src={{fiesta.img}}  *ngFor="let fiesta of fiestaInfo"  height="150px" id={{fiesta.id}} (click)="capturarValor($event)" class="img-link"  (click)="activateAction()">
+      </ng-container>
+      <!-- </ng-container> -->
+      <i class="fa-solid fa-caret-down"></i>
+    </div>
+    <div class="description-flyer-container" id="contenedor">
+      <p *ngIf="!activate" >Tu sigiente Gran noche te espera</p>
+      <div class="" *ngIf="activate"> 
+      <div class="card" *ngFor="let fiesta of fiestasList.slice(0, 5)"  >
+        <h3>{{fiesta.nombre}}</h3>
+        <p>{{fiesta.ubicacion}}</p>
+        <img src={{fiesta.img}} alt=""[width]="200">
+      </div>
+      </div>
+        
+    </div>
+  </section>
+
+
+</div>

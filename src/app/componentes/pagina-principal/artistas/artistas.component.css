@@ -1,0 +1,86 @@
+.artistas{
+    background-color: var(--azul);   
+    padding: 3rem;
+}
+
+.card-artista-activate{
+    background-color: var(--arcilla);
+    padding-right: 1rem;
+}
+
+.contenedor-card-artista{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+
+.info-card-artista{
+    padding: 2rem;
+    max-width: 50%;
+    width: 50%;
+    text-align: start;
+    background-color: var(--arcilla);
+}
+
+.card-artista-activate{
+    width: 25%;
+}
+
+
+.info-card-artista p{
+    line-height: 20px;
+    text-align: start;
+    margin-top: 20px;
+}
+
+
+
+@media (max-width: 700px){
+    
+.contenedor-card-artista{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.info-card-artista{
+    padding: 2rem;
+    max-width: 100%;
+    width: 100%;
+    text-align: start;
+}
+
+
+.card-artista-activate{
+    max-width: 100%;
+}
+
+.card-artista-activate{
+    width: 100%;
+}
+
+
+}
+
+.card-artista-links{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.card-artista-links i{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.card-artista-activate div{
+    display: flex;
+}

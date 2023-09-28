@@ -1,0 +1,22 @@
+
+{
+    
+   "fiesta1": {
+        "nombe":"Vision",
+        "fecha":"01/04/2023",
+        "djs":["Dj Alejo", "Guss Muñoz","J-paz","Alan Aztroza", "Dimmis"],
+        "ubicacio":"La Masia eventos",
+        "comienzo":"11hs",
+        "fin":"7am"
+    },
+    
+    "fiesta2":{
+        "nombe":"The Bass Producciones",
+        "fecha":"01/04/2023",
+        "djs":["Dj Alejo", "Guss Muñoz","J-paz","Alan Aztroza", "Dimmis"],
+        "ubicacio":"La Masia eventos",
+        "comienzo":"11hs",
+        "fin":"7am"
+    }
+
+}

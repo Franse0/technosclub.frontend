@@ -1,0 +1,26 @@
+<div class="artistas">
+<app-lista-artistas 
+(emitirArtista)="getArtista($event)"
+(click)="cerrar($event)"></app-lista-artistas>
+
+
+<div *ngIf="artistaCard">
+
+    <div class="contenedor-card-artista" >
+    <div class="card-artista-activate" >
+        <img [src]="artistaCard.img" alt="">
+        <h2>{{artistaCard.nombre}} {{artistaCard.apellido}}</h2>
+        <div class="card-artista-links">
+            <a href="{{artistaCard.soundcloud}} "><i class="fa-brands fa-soundcloud" style="color: orange;"></i> </a>
+            <a href="{{artistaCard.soundcloud}} "><i class="fa-brands fa-spotify" style="color: green;"></i> </a>
+            <a href="{{artistaCard.soundcloud}} "><i class="fa-brands fa-instagram" style="color: blueviolet;"></i> </a>
+        </div>
+    </div>
+
+    <div class="info-card-artista">
+        <h1> {{artistaCard.seudonimo}}</h1>
+        <p>{{artistaCard.descripcion}}</p>
+    </div>
+    </div>
+</div>
+</div>

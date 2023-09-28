@@ -1,0 +1,31 @@
+.artistas{
+    padding: 8rem 0 3rem 0;
+}
+.artistas-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+    gap: 30px;
+}
+
+.card-artista{
+    cursor: pointer;
+    /* height:250px; */
+    width:  200px;
+    box-shadow: 5px 4px 5px rgba(0,0,0,.7);
+    text-align: center;
+}
+
+.card-artista h3{
+    margin: 15px 0px;
+    font-family: sans-serif;
+    color: white;
+}
+
+.card-artista img { 
+    height: 200px;
+    width: 100%;
+}

@@ -1,0 +1,12 @@
+.columna1, .comlumna2{
+    display: flex;
+    flex-direction: column;
+}
+
+.noticiaB h3{
+    cursor: pointer;
+}
+
+.noticiaB h3:hover{
+text-decoration:underline ;
+}
