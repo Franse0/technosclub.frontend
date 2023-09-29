@@ -1,24 +1,42 @@
 <div class="all-container">
 <section class="events-all" id="eventos">
 
-    <div class="flyer-container" id="pseudoSlider">
+    <div class="flyer-container" id="pseudoSlider" >
       <i class="fa-solid fa-caret-up" ></i>
     
       <!-- <ng-container ngIf="i < 4"> -->
         <ng-container >
-       <img src={{fiesta.img}}  *ngFor="let fiesta of fiestaInfo"  height="150px" id={{fiesta.id}} (click)="capturarValor($event)" class="img-link"  (click)="activateAction()">
+       <img src={{fiesta.img}}  *ngFor="let fiesta of fiestasList"  height="150px" id={{fiesta.id}} (click)="capturarValor($event)" class="img-link"  (click)="activateAction()">
       </ng-container>
       <!-- </ng-container> -->
-      <i class="fa-solid fa-caret-down"></i>
+      <i class="fa-solid fa-caret-down" (click)="showMore($event)"></i>
     </div>
+
+
+
     <div class="description-flyer-container" id="contenedor">
       <p *ngIf="!activate" >Tu sigiente Gran noche te espera</p>
+
+
+      
       <div class="" *ngIf="activate"> 
-      <div class="card" *ngFor="let fiesta of fiestasList.slice(0, 5)"  >
-        <h3>{{fiesta.nombre}}</h3>
-        <p>{{fiesta.ubicacion}}</p>
-        <img src={{fiesta.img}} alt=""[width]="200">
-      </div>
+        <div class="card" *ngFor="let fiesta of fiestaInfo" >
+          <h3 class="tittle-card">{{fiesta.nombre}}</h3>
+          <div class="all-info-fest">
+            <img [src]=fiesta.img alt={{fiesta.nombre}} class="card-img">
+            <div class="info-fest">
+              <h3 class="card-description">{{fiesta.descripcion}} </h3>
+              <h4>Djs: {{fiesta.djs}} </h4>
+              <p> Fecha:{{fiesta.fecha}} </p>
+              <p> Organiza: {{fiesta.organiza}} </p>
+              <p> Precio actual: ${{fiesta.precio}} </p>
+              <div class="btn-buy-container">
+                <button class="btn-buy">Comprar entrada</button>
+              </div>
+              <iframe [src]=fiesta.ubicacion class="iframe-card" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
       </div>
         
     </div>
