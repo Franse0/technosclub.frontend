@@ -1,78 +1,27 @@
 <div class="all-container">
 <section id="" class="eventos">
     <h2>Próximos eventos</h2>
-    <div class="slider-contenedor">
-      <div class="contenido-slider">
-        <section class="slider">
-          <div class="text-slider">
-            <h2>The Bass Producciones - 01/04/2023</h2>
-            <p>
-              No te pierdas el primer evento del OTOÑO de The bass
-              Producciones en la Patagonia! Este evento contará con los
-              DJs Alejo, Guss Muñoz y J Paz en formato b2b con Mati
-              Astroza y el DJ principal Dimmish.
-            </p>
-            <div class="buttoms-slider">
-              <a href="#">Comprar entradas</a>
-              <a href="#">Más información</a>
-            </div>
-          </div>
-          <!-- <img src="./aseets/amigos.svg" alt="" width="300px"> -->
-          <img src="assets/imagenes/theBass.jpg" alt="" class="img-slider" />
-        </section>
-      </div>
-      <div class="contenido-slider">
-        <section class="slider">
-          <div class="text-slider">
-            <h2>Vision Festival - 15/04/2023</h2>
-            <p>
-              No te pierdas el festival de música electrónica más grande
-              del año: Vision Festival. Este festival contará con la
-              actuación principal de JUAN HANSEN en formato live, junto
-              con los DJs Valentina Chaves, Sehmsordf, Gabee y Vj jt & LD
-              Agussit.
-            </p>
-            <div class="buttoms-slider">
-              <a href="#">Comprar entradas</a>
-              <a href="#">Más información</a>
-            </div>
-          </div>
-          <!-- <img src="./aseets/amigos.svg" alt="" width="300px"> -->
-          <img src="assets/imagenes/vision.jpg" alt="" class="img-slider" />
-        </section>
-      </div>
-      <div class="contenido-slider">
-        <section class="slider">
-          <div class="text-slider">
-            <h2>¡Muy pronto!</h2>
-            <p>
-              El próximo gran evento de la temporada de música electrónica
-              en la Patagonia!
-            </p>
-            <!-- <a href="#">Comprar entradas</a> -->
-          </div>
-          <img src="assets/imagenes/amigos.svg" alt="" width="300px" />
-        </section>
-      </div>
-      <div class="contenido-slider">
-        <section class="slider">
-          <div class="text-slider">
-            <h2>The Bass Producciones - 01/04/2023</h2>
-            <p>
-              No te pierdas el primer evento del OTOÑO de The bass
-              Producciones en la Patagonia! Este evento contará con los
-              DJs Alejo, Guss Muñoz y J Paz en formato b2b con Mati
-              Astroza y el DJ principal Dimmish.
-            </p>
-            <div class="buttoms-slider">
-              <a href="#">Comprar entradas</a>
-              <a href="#">Más información</a>
-            </div>
-          </div>
+    <!-- <div class="slider-contenedor" (window:DOMContentLoaded)="initializeSlider()"> -->
+      <div class="slider-contenedor" >
 
-          <img src="assets/imagenes/theBass.jpg" alt="" class="img-slider" />
+      <div class="contenido-slider" *ngFor="let fiesta of fiesta" >
+        <section class="slider">
+          <div class="text-slider">
+            <h2>{{fiesta.nombre}} </h2>
+            <h3>{{fiesta.fecha}} </h3>
+            <p>
+              {{fiesta.descripcion}}
+            </p>
+            <div class="buttoms-slider">
+              <a href="#">Comprar entradas</a>
+              <a href="#">Más información</a>
+            </div>
+          </div>
+          <!-- <img src="./aseets/amigos.svg" alt="" width="300px"> -->
+          <img [src]=fiesta.img alt="" class="img-slider" />
         </section>
       </div>
+  
     </div>
   </section>
 </div>

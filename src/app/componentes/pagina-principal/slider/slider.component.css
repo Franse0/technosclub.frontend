@@ -1,0 +1,116 @@
+.slider-contenedor{
+    width: 100%;
+    display: flex;
+  }
+  
+  
+  
+  .contenido-slider{
+    background: var(--beige );
+    padding: 2rem;
+    height:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* Etiqueta para mantener los hijos dentro de los padres */
+    flex-shrink: 0;
+    width: 100%;
+  }
+  
+  /* .contenido-slider:nth-child(2){
+  background: var(--arcilla);
+  }
+  .contenido-slider:nth-child(3){
+  background: var(--gris);
+  } */
+  
+  .contenido-slider section{
+    display: flex;
+  }
+  
+  .img-slider{
+    max-width: 300px;
+    width: auto;
+  }
+  
+  .text-slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  
+  .text-slider h2{
+    font-size: 2rem;
+    text-align: center;
+    max-width: 80%;
+  }
+  
+  .text-slider p{
+    text-align: justify;
+    line-height: 25px;
+    text-align: flex-start;
+    width: 50%;
+  }
+  
+  .text-slider a{
+    padding: .6rem 2rem;
+    background-color: var(--narajna);
+    border-radius: 30px;
+    color: var(--azul);
+    text-transform: uppercase;
+    display: flex;
+    text-align: center;
+  }
+  
+  .buttoms-slider{
+    display: flex;
+    gap: 30px;
+  }
+  
+  @media (max-width: 900px){
+    
+  }
+  @media (max-width: 700px){
+    .img-slider{
+      width: 250px;
+      margin: 10px auto;
+      border-radius: 10px;
+      height: 300px;
+    }
+  
+    .text-slider h2{
+      font-size: 2rem;
+    }
+  
+    .text-slider p{
+      line-height: 20px;
+      width: 80%;
+    }
+  
+    .text-slider{
+      gap: 10px;
+    }
+  
+    
+  .text-slider a{
+    padding: .6rem 1.4rem;
+    font-size: .9rem;
+  }
+  
+  .contenido-slider section{
+    flex-direction: column-reverse;
+  }
+  
+  .contenido-slider{
+    padding: 1rem;
+    height: auto;
+  }
+  
+  .buttoms-slider{
+    flex-direction: column;
+  }
+  }

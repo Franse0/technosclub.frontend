@@ -13,10 +13,15 @@
 .catalogo{
     display:flex ;
     flex-direction: column;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     justify-content: flex-end;
 }
 
+.catalogo>div{
+    padding-top: 1rem;
+    width: 95%;
+    margin: 0 auto;
+}
 .card-lugar{
     max-width: 100%;
     padding: 2rem;
@@ -47,8 +52,15 @@
     color: var(--narajna);
     transition: background-color .3s;
 }
-
-
+.location{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.iframe-card{
+    width: 200px;
+    height: 100px;
+}
 @media(max-width:770px){
     .card-lugar{
         flex-direction: column;

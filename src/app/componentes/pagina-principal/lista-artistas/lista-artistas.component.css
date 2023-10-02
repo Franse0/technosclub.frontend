@@ -1,5 +1,6 @@
 .artistas{
     padding: 8rem 0 3rem 0;
+    color: white;
 }
 .artistas-container{
     display: flex;
@@ -17,6 +18,8 @@
     width:  200px;
     box-shadow: 5px 4px 5px rgba(0,0,0,.7);
     text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .card-artista h3{
@@ -28,4 +31,18 @@
 .card-artista img { 
     height: 200px;
     width: 100%;
+}
+
+.artistas-container{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.artistas>div>h2{
+    color: var(--beige);
 }

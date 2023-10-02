@@ -1,7 +1,10 @@
 <div class="all-container">
-<section class="noticias-section">
+<section class="noticias-section" id="noticias">
+
+  <h3>Lo que hay que saber</h3>
+  <div>
     <div class="noticias-left" >
-      <div class="noticia" *ngFor="let noticias of noticiasList"  (click)="renderNoticia($event)">
+      <div class="noticia" *ngFor="let noticias of noticiasRender"  (click)="renderNoticia($event)">
         <h3 id={{noticias.id}}>
           {{noticias.titulo}}
         </h3>
@@ -11,30 +14,29 @@
             [alt]="noticias.id"
             width="200px"
           />
-          <p>
-            {{noticias.noticia}}
-           
-          </p>
-        </div>
+            <p>{{noticias.cuerpo}}</p>
+            
+          </div>
+          <span>{{noticias.fecha_publi}} </span>
       </div>
 
 
     </div>
     <div class="noticias-right">
-      <div class="columna1">
+     
+    
         <div class="noticiaB"  *ngFor="let noticias of noticiasList" id="{{noticias.id}}" (click)="renderNoticia($event)">
+       
           <h3>{{noticias.titulo}}</h3>
-          <p>{{noticias.noticia}}</p>
+          <p>{{noticias.resumen}}</p>
+          <span>{{noticias.fecha_publi}} </span>
+
         </div>
-      </div>
-      <div class="columna2">
-        <div class="noticiaB"  *ngFor="let noticias of noticiasList" id="{{noticias.id}}" (click)="renderNoticia($event)">
-          <h3>{{noticias.titulo}}</h3>
-          <img [src]="noticias.img" />
-        </div>
-      </div>
+      
+      
 
  
     </div>
+  </div>
   </section>
 </div>

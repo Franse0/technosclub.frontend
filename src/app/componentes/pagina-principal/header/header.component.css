@@ -1,0 +1,125 @@
+  
+  .header{
+    margin: 0 auto;
+    display: flex;
+    height: 4rem;
+    background: var(--narajna);
+    justify-content: center;
+    z-index: 1000;
+    width: 100%;
+    position: fixed;
+  }
+  
+  .img-logo-header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  
+  .header-logo{
+    width: 180px;
+    align-items: center ;
+    height: 180px;
+    transform: translateX(-60px);
+    padding: 0;
+  }
+  
+  /* Nav */
+  nav{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: last baseline;
+    justify-content: center; 
+    z-index: 2000;
+    transform: translateX(-60px);
+  }
+  
+  nav ul    {
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a{
+    color: white;
+    padding: .2rem 1rem;
+  
+  }
+  
+  nav ul li a:hover{
+    background-color: var(--beige);
+    border-radius: 50%;
+  }
+  
+  .visibility{
+    display:flex;
+  }
+  
+  .bars-nav{
+    background: transparent;
+    border: none;
+    display:flex;
+    justify-content: flex-end;
+    align-items: last baseline;
+    display: none;
+    margin-top: 12px;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  
+  .fa-solid{
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .bars-nav:hover{
+    background: var(--beige);
+  }
+  
+  
+  @media (max-width: 700px){
+    .header-logo{
+      width: 140px;
+    }
+    nav ul {
+      font-size: .9rem;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      /* margin-top: 40px; */
+      padding: 3rem 2.3rem;
+      gap: 40px;
+      background-color: var(--narajna);
+      border-radius: 30px;
+      /* height: 560px; */
+      position: fixed;
+      justify-content: center;
+    }
+  
+    .bars-nav{
+      display: block;
+      position: fixed;
+      background-color: var(--narajna);
+      right: 10px;
+      margin-bottom: 40px;
+      z-index: 2500;
+      padding: .5rem;
+    }
+  
+    .header{
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+    
+  
+    .visibility{
+      display: none;
+      transition: 2s;
+    }
+  
+  }
+  
+  
+  

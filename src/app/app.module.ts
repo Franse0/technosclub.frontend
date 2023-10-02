@@ -12,9 +12,10 @@ import { EventosComponent } from './componentes/pagina-principal/eventos/eventos
 import { FooterComponent } from './componentes/pagina-principal/footer/footer.component';
 import { PaginaPrincipalComponent } from './componentes/pagina-principal/pagina-principal.component';
 import { HttpClientModule} from '@angular/common/http';
-import { CatalogoComponent } from './componentes/pagina-principal/catalogo/catalogo.component';
+// import { CatalogoComponent } from './componentes/pagina-principal/catalogo/catalogo.component';
 import { ArtistasComponent } from './componentes/pagina-principal/artistas/artistas.component';
 import { ListaArtistasComponent } from './componentes/pagina-principal/lista-artistas/lista-artistas.component';
+import { CatalogoComponent } from './componentes/pagina-principal/catalogo/catalogo.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +26,8 @@ import { ListaArtistasComponent } from './componentes/pagina-principal/lista-art
     EventosComponent,
     FooterComponent,
     PaginaPrincipalComponent,
-    CatalogoComponent,
     ArtistasComponent,
+    CatalogoComponent,
     ListaArtistasComponent
     ],
   imports: [

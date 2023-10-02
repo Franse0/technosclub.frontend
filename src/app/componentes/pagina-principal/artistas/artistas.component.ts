@@ -13,10 +13,10 @@ export class ArtistasComponent  implements OnInit{
 
   constructor(private artistaService:ArtistasService){}
   ngOnInit(): void {
-
+    
   }
 
-
+  
   getArtista(id:Number):void{
     this.artistaService.obtenerArtista(id).subscribe(data=>{
       console.log(data)
@@ -25,8 +25,11 @@ export class ArtistasComponent  implements OnInit{
   }
 
 
+
+
   cerrar(e:Event){
     if(!(<HTMLImageElement>e.target).classList.contains("card-artista-activate") ||!(<HTMLImageElement>e.target).classList.contains("info-card-artista")||!(<HTMLImageElement>e.target).classList.contains("card-artista")){
+      
       this.artistaCard="";
     }
   }

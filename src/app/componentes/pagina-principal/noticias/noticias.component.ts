@@ -9,12 +9,15 @@ import { NoticiasService } from 'src/app/servicios/noticias.service';
 
 export class NoticiasComponent implements OnInit{
 noticiasList:any;
+noticiasRender:any;
 
   constructor(private noticiasService:NoticiasService){}
 
   ngOnInit(): void {
     this.noticiasService.obtenerDatos().subscribe(data=>{
       this.noticiasList=data
+      this.noticiasRender=data.slice(0,5)
+      console.log(this.noticiasRender)
     })
   }
 

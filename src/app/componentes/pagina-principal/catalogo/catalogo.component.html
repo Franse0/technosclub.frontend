@@ -1,15 +1,25 @@
-<section class="catalogo">
+<section class="catalogo" id="galeria">
+    <div>
+        <h2>Lugares</h2>
+    </div>
     <div class="lugares">
         <div class="card-lugar" *ngFor="let lugares of catalogoList">
             <div class="img-card-container">
-            <img [src]="lugares.img" alt="">
+            <img [src]="lugares.img1" alt="">
+            <img [src]="lugares.img2" alt="">
             <!-- <img src="assets/imagenes/420jpeg.jpeg" alt=""> -->
             </div>
             <div class="info-lugar">
                 <h3 class="title-card">{{lugares.nombre}}</h3>
                 <p>{{lugares.descripcion}} </p>
+                <div class="location">
+                   <div>
                     <p>{{lugares.ubicacion}}</p>
-                    <p>{{lugares.horario}}</p>
+                    <span>{{lugares.instagram}} </span>
+                   </div>
+                    <iframe [src]="lugares.link_ubi" class="iframe-card" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>              
+                  </div>
+                    
             </div>
         </div>
 

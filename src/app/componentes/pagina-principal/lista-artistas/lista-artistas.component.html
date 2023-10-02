@@ -1,4 +1,7 @@
-<div class="artistas">
+<div class="artistas" id="directorio">
+    <div>
+        <h2>Artistas</h2>
+    </div>
     <div class="artistas-container"  >
         <div class="card-artista" id={{artista.id}}  (click)="capturarValor($event)"  *ngFor="let artista of artistas" >
             <img [src]="artista.img" alt=""  id={{artista.id}}>

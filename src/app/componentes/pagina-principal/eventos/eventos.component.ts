@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { FiestasService } from 'src/app/servicios/fiestas.service';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -9,6 +9,9 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./eventos.component.css']
 })
 export class EventosComponent implements OnInit{
+  @ViewChild('miBotonUp', { static: true }) miBoton: ElementRef;
+  @ViewChild('miBotonDown', { static: true }) miBotonDown: ElementRef;
+
   fiestasList:any;
   fiestaInfo:any;
   activate:Boolean=false;
@@ -23,6 +26,11 @@ export class EventosComponent implements OnInit{
       console.log(data)
       this.fiestasList=data.slice(this.inicio, this.fin)
       console.log(this.fiestasList)
+      if(this.inicio==0) {
+        const miBotonUp = this.miBoton.nativeElement;
+        miBotonUp.classList.add("block-btn")
+        return;
+      }
     });
   }
 
@@ -49,15 +57,40 @@ export class EventosComponent implements OnInit{
   showMore(e:Event){
     if((<HTMLAnchorElement>e.target).classList.contains("fa-caret-down")){
         this.fiestasServise.obtenerDatos().subscribe(data =>{
-          this.inicio=Number(this.inicio)+1;
-          this.fin= Number(this.fin)+1;;
-          console.log(data.length)
           const limit:(Number) = data.length ; 
-          console.log(limit)
-          console.log(this.fin);
-          if(this.fin === limit)return;
+          if(this.fin === limit)   {
+            const miBotonDown = this.miBotonDown.nativeElement
+            miBotonDown.classList.add("block-btn")
+            return;
+          }
+          else{
+          const miBotonUp = this.miBoton.nativeElement;
+          miBotonUp.classList.remove("block-btn")
+          this.inicio=Number(this.inicio)+1;
+          this.fin= Number(this.fin)+1;
           this.fiestasList=data.slice(this.inicio, this.fin);
-          console.log(this.fiestasList)
+          console.log(this.fiestasList);
+
+          }
+        });
+      }
+    return 
+  }
+
+  showMenos(e:Event){
+    if((<HTMLAnchorElement>e.target).classList.contains("fa-caret-up")){
+      this.fiestasServise.obtenerDatos().subscribe(data =>{
+          if(this.inicio==0) {
+            const miBotonUp = this.miBoton.nativeElement;
+            miBotonUp.classList.add("block-btn");
+          }
+          else {
+            this.miBotonDown.nativeElement.classList.remove("block-btn");
+            this.inicio=Number(this.inicio)-1;
+            this.fin= Number(this.fin)-1;        
+            this.fiestasList=data.slice(this.inicio, this.fin);
+            console.log(this.fiestasList);
+          }
         });
       }
     return 

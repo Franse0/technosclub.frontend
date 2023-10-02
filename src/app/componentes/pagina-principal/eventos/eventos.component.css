@@ -46,6 +46,8 @@ display: block;
     max-width: 200px;
     text-transform: uppercase;
     color: var(--azul);
+    cursor: pointer;
+    font-weight: bold;
 }
 
 
@@ -63,5 +65,14 @@ button{
 
 #contenedor{
     max-width: 80%;
-    border: 1px solid red;
+}
+
+
+
+.block-btn{
+    cursor: not-allowed;
+}
+
+i{
+    cursor: pointer;
 }
